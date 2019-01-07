@@ -7,6 +7,10 @@
     "Save" : "Enregistrer",
     "SureToDelete" : "Etes vous sûr de vouloir supprimer?",
     "BackToList" : "Retour à la liste",
+    "UnderConstruction" : "En construction",
+
+    "HOME*****************************************" : "HOME",
+    "HomePage" : "Page d'accueil",
 
     "INGREDIENT*****************************************" : "INGREDIENT",
     "Ingredient" : "Ingrédient",

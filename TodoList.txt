@@ -1,5 +1,3 @@
-Ajouter dropdown Ingredient
-
 Ajouter recipe
     Entity
     Service
