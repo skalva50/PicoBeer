@@ -21,6 +21,12 @@
     "Hop": "Houblon",
     "ListHop": "Liste Houblons",
     "CreateHop" : "Ajouter nouveau houblon",
-    "Alpha" : "Alpha"
+    "Alpha" : "Alpha",
+
+    "YEAST*****************************************" : "YEAST",
+    "Yeast": "Levure",
+    "ListYeast": "Liste Levures",
+    "CreateYeast" : "Ajouter nouvelle levure",
+    "Attenuation" : "Atténuation"
     
 }

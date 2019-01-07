@@ -21,6 +21,12 @@
     "Hop": "Hop",
     "ListHop": "List Hop",
     "CreateHop" : "Create new Hop",
-    "Alpha" : "Alpha"
+    "Alpha" : "Alpha",
+
+    "YEAST*****************************************" : "YEAST",
+    "Yeast": "Yeast",
+    "ListYeast": "List Yeast",
+    "CreateYeast" : "Create new yeast",
+    "Attenuation" : "Attenuation"
     
 }

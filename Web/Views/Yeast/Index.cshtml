@@ -1,14 +1,14 @@
-@model IEnumerable<PicoBeer.Domain.Hop>
+@model IEnumerable<PicoBeer.Domain.Yeast>
 
 @{
-    ViewData["Title"] = Localizer["ListHop"];
+    ViewData["Title"] = Localizer["ListYeast"];
 }
 <div class="row">
-    <h2>@Localizer["ListHop"]</h2>
+    <h2>@Localizer["ListYeast"]</h2>
 </div>
 <div class="row">
 <p>
-    <a asp-action="Create">@Localizer["CreateMalt"]</a>
+    <a asp-action="Create">@Localizer["CreateYeast"]</a>
 </p>
 </div>
 <div class="row">
@@ -25,7 +25,7 @@
                     @Localizer["Description"]
                 </th>
                 <th scope="col">
-                    @Localizer["Alpha"]
+                    @Localizer["Attenuation"]
                 </th>
                 <th scope="col"></th>
             </tr>
@@ -43,7 +43,7 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Alpha)
+                    @Html.DisplayFor(modelItem => item.Attenuation)
                 </td>                              
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">@Localizer["Edit"]</a> |
