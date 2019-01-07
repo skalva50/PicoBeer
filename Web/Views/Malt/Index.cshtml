@@ -21,6 +21,15 @@
                 <th scope="col">
                     @Localizer["Name"]
                 </th>
+                <th scope="col">
+                    @Localizer["Description"]
+                </th>
+                <th scope="col">
+                    @Localizer["Ebc"]
+                </th>
+                <th scope="col">
+                    @Localizer["ExtractFactor"]
+                </th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -33,6 +42,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ebc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExtractFactor)
+                </td>                                
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">@Localizer["Edit"]</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">@Localizer["Details"]</a> |

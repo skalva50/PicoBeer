@@ -17,6 +17,21 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">@Localizer["Description"]</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ebc" class="control-label">@Localizer["Ebc"]</label>
+                <input asp-for="Ebc" class="form-control" />
+                <span asp-validation-for="Ebc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtractFactor" class="control-label">@Localizer["ExtractFactor"]</label>
+                <input asp-for="ExtractFactor" class="form-control" />
+                <span asp-validation-for="ExtractFactor" class="text-danger"></span>
+            </div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
