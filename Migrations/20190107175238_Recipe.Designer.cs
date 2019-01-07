@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PicoBeer.Dal;
@@ -9,9 +10,10 @@ using PicoBeer.Dal;
 namespace PicoBeer.Migrations
 {
     [DbContext(typeof(PicoBeerContext))]
-    partial class PicoBeerContextModelSnapshot : ModelSnapshot
+    [Migration("20190107175238_Recipe")]
+    partial class Recipe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,8 +59,6 @@ namespace PicoBeer.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Description");
 
                     b.Property<string>("Name");
 

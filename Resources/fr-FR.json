@@ -16,6 +16,7 @@
     "Ingredient" : "Ingrédient",
     "Name" : "Nom",
     "Descritpion" : "Description",
+    "Quantity" : "Quantité",
 
     "MALT*****************************************" : "MALT",
     "Malt": "Malt",
@@ -34,6 +35,13 @@
     "Yeast": "Levure",
     "ListYeast": "Liste Levures",
     "CreateYeast" : "Ajouter nouvelle levure",
-    "Attenuation" : "Atténuation"
+    "Attenuation" : "Atténuation",
+
+    "RECIPE*****************************************" : "RECIPE",
+    "Recipe" : "Recette",
+    "ListRecipe": "Liste Recette",
+    "CreateRecipe" : "Ajouter nouvelle recette",
+    "BoilingTime" : "Temps d'ébullition",
+    "Volume" : "Volume"
     
 }

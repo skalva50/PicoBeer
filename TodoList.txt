@@ -1,5 +1,1 @@
-Ajouter recipe
-    Entity
-    Service
-    Controller
-    Crud View
+Completer formulaire creation recette

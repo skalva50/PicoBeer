@@ -1,0 +1,38 @@
+@model PicoBeer.Domain.Recipe
+@{
+    ViewData["Title"] =  Localizer["Delete"];
+}
+
+<h2>@Localizer["Delete"]</h2>
+
+<h3>@Localizer["SureToDelete"]</h3>
+<div>
+    <h4>@Localizer["Recipe"]</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Localizer["Name"]
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Localizer["Description"]
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Localizer["Volume"]
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Volume)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="@Localizer["Delete"]" class="btn btn-primary" /> |
+        <a asp-action="Index">@Localizer["BackToList"]</a>
+    </form>
+</div>

@@ -51,6 +51,7 @@ namespace PicoBeer
             services.AddScoped<IMaltService, MaltService>();
             services.AddScoped<IHopService, HopService>();
             services.AddScoped<IYeastService, YeastService>();
+            services.AddScoped<IRecipeService, RecipeService>();
 
             services.AddDbContext<PicoBeerContext>(options =>
                   options.UseNpgsql(Configuration.GetConnectionString("PicoBeer")));
