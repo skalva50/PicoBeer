@@ -1,0 +1,25 @@
+@model PicoBeer.Domain.Malt
+
+@{
+    ViewData["Title"] = Localizer["Details"];
+}
+<div class="row"->
+    <h2>@Localizer["Details"]</h2>
+</div>
+<div class="row">
+    <h4>@Localizer["Malt"]</h4>
+</div>
+<div class="row">
+    <dl class="dl-horizontal">
+        <dt>
+            @Localizer["Name"]
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+<div class="row">
+    <a asp-action="Edit" asp-route-id="@Model.Id">@Localizer["Edit"]</a> |
+    <a asp-action="Index">@Localizer["BackToList"]</a>
+</div>

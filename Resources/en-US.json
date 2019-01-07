@@ -1,0 +1,16 @@
+{ 
+    "GENERIC*****************************************" : "GENERIC",
+    "CreateNew": "Create New",
+    "Edit": "Edit",
+    "Details": "Details",
+    "Delete": "Delete",
+    "Save" : "Save",
+    "SureToDelete" : "Are you sure you want to delete this?",
+    "BackToList" : "Back to List",
+
+    "MALT*****************************************" : "MALT",
+    "Malt": "Malt",
+    "ListMalt": "List Malt",
+    "CreateMalt" : "Create new Malt",
+    "Name" : "Name"
+}
