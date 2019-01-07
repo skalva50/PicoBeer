@@ -15,6 +15,12 @@
     "ListMalt": "List Malt",
     "CreateMalt" : "Create new Malt",
     "Ebc" : "Ebc",
-    "ExtractFactor" : "Extract Factor"
+    "ExtractFactor" : "Extract Factor",
+
+    "HOP*****************************************" : "HOP",
+    "Hop": "Hop",
+    "ListHop": "List Hop",
+    "CreateHop" : "Create new Hop",
+    "Alpha" : "Alpha"
     
 }

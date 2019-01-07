@@ -1,3 +1,7 @@
 Ajouter les View crud Hop, Yeast
 
-recipe
+Ajouter recipe
+    Entity
+    Service
+    Controller
+    Crud View

@@ -1,16 +1,15 @@
-@model PicoBeer.Domain.Malt
+@model PicoBeer.Domain.Hop
 
 @{
-    ViewData["Title"] = Localizer["Edit"];
+    ViewData["Title"] = Localizer["CreateHop"];
 }
 
-<h2>@Localizer["Edit"]</h2>
+<h2>@Localizer["CreateHop"]</h2>
 
-<h4>@Localizer["Malt"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label">@Localizer["Name"]</label>
@@ -23,18 +22,12 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Ebc" class="control-label">@Localizer["Ebc"]</label>
-                <input asp-for="Ebc" class="form-control" />
-                <span asp-validation-for="Ebc" class="text-danger"></span>
+                <label asp-for="Alpha" class="control-label">@Localizer["Alpha"]</label>
+                <input asp-for="Alpha" class="form-control" />
+                <span asp-validation-for="Alpha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ExtractFactor" class="control-label">@Localizer["ExtractFactor"]</label>
-                <input asp-for="ExtractFactor" class="form-control" />
-                <span asp-validation-for="ExtractFactor" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
+                <input type="submit" value="@Localizer["CreateHop"]" class="btn btn-primary" />
             </div>
         </form>
     </div>

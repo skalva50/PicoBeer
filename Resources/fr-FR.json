@@ -15,6 +15,12 @@
     "ListMalt": "Liste Malt",
     "CreateMalt" : "Ajouter nouveau Malt",
     "Ebc" : "Ebc",
-    "ExtractFactor" : "Facteur d'extraction"
+    "ExtractFactor" : "Facteur d'extraction",
+
+    "HOP*****************************************" : "HOP",
+    "Hop": "Houblon",
+    "ListHop": "Liste Houblons",
+    "CreateHop" : "Ajouter nouveau houblon",
+    "Alpha" : "Alpha"
     
 }
