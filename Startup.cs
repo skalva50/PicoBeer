@@ -80,7 +80,7 @@ namespace PicoBeer
             }
             else
             {
-                app.UseExceptionHandler("/Test/Error");
+                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
@@ -92,7 +92,7 @@ namespace PicoBeer
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Malt}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             }); 
                    
             var builder = new ConfigurationBuilder()
