@@ -114,10 +114,47 @@ namespace PicoBeer.Dal
                 Ingredient = getListMalt().FirstOrDefault(M => M.Name == "CARAFA SPECIAL I"),
                 Quantity = 1000
             };
+            RecipeHop recipeHop1 = new RecipeHop()
+            {
+                Recipe = choucroute,
+                Ingredient = getListHop().FirstOrDefault(H => H.Name == "Saaz"),
+                Quantity = 50,
+                BoilingTime = 60
+            };
+            RecipeHop recipeHop2 = new RecipeHop()
+            {
+                Recipe = choucroute,
+                Ingredient = getListHop().FirstOrDefault(H => H.Name == "East Kent Goldings"),
+                Quantity = 25,
+                BoilingTime = 60
+            };
+            RecipeHop recipeHop3 = new RecipeHop()
+            {
+                Recipe = choucroute,
+                Ingredient = getListHop().FirstOrDefault(H => H.Name == "East Kent Goldings"),
+                Quantity = 25,
+                BoilingTime = 10
+            };            
             _picoBeerContext.RecipeMalt.AddRange(choucrouteMalt1);
             _picoBeerContext.RecipeMalt.AddRange(choucrouteMalt2);
             choucroute.ListMalt.Add(choucrouteMalt1);
             choucroute.ListMalt.Add(choucrouteMalt2);
+
+            _picoBeerContext.RecipeHop.AddRange(recipeHop1);
+            _picoBeerContext.RecipeHop.AddRange(recipeHop2);
+            _picoBeerContext.RecipeHop.AddRange(recipeHop3);
+            choucroute.ListHop.Add(recipeHop1);
+            choucroute.ListHop.Add(recipeHop2);
+            choucroute.ListHop.Add(recipeHop3);
+
+            RecipeYeast recipeYeast = new RecipeYeast()
+            {
+                Recipe = choucroute,
+                Ingredient = getListYeast().FirstOrDefault(Y => Y.Name == "SAFLAGER S-23"),
+                Quantity = 11.5
+            };
+            _picoBeerContext.RecipeYeast.AddRange(recipeYeast);
+            choucroute.ListYeast.Add(recipeYeast);
             return choucroute;
         }
     }
