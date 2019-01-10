@@ -7,11 +7,11 @@ using PicoBeer.Services;
 
 namespace PicoBeer.Web.Controllers
 {
-    public class BaseController<T> : Controller where T : BaseEntity
+    public abstract class BaseController<T> : Controller where T : BaseEntity
     {
-        private IService<T> _service;
+        private readonly IService<T> _service;
 
-        public BaseController(IService<T> service)
+        protected BaseController(IService<T> service)
         {
             _service = service;
         }

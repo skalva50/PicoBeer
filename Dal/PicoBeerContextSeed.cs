@@ -5,7 +5,7 @@ using PicoBeer.Domain;
 
 namespace PicoBeer.Dal
 {
-    public class PicoBeerContextSeed
+    public static class PicoBeerContextSeed
     {
         private static PicoBeerContext _picoBeerContext;
         public static async Task SeedAsync(PicoBeerContext picoBeerContext)
@@ -105,13 +105,13 @@ namespace PicoBeer.Dal
             RecipeMalt choucrouteMalt1 = new RecipeMalt()
             {
                 Recipe = choucroute,
-                Ingredient = getListMalt().Where(M => M.Name == "Pilsen 2RP").FirstOrDefault(),
+                Ingredient = getListMalt().FirstOrDefault(M => M.Name == "Pilsen 2RP"),
                 Quantity = 6500
             };
             RecipeMalt choucrouteMalt2 = new RecipeMalt()
             {
                 Recipe = choucroute,
-                Ingredient = getListMalt().Where(M => M.Name == "CARAFA SPECIAL I").FirstOrDefault(),
+                Ingredient = getListMalt().FirstOrDefault(M => M.Name == "CARAFA SPECIAL I"),
                 Quantity = 1000
             };
             _picoBeerContext.RecipeMalt.AddRange(choucrouteMalt1);

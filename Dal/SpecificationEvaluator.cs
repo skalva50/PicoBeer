@@ -7,7 +7,7 @@ using System.Text;
 
 namespace PicoBeer.Dal
 {
-    public class SpecificationEvaluator<T> where T : BaseEntity
+    public static class SpecificationEvaluator<T> where T : BaseEntity
     {
         public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> specification)
         {
