@@ -8,6 +8,7 @@
     "SureToDelete" : "Etes vous sûr de vouloir supprimer?",
     "BackToList" : "Retour à la liste",
     "UnderConstruction" : "En construction",
+    "Close" : "Fermer",
 
     "HOME*****************************************" : "HOME",
     "HomePage" : "Page d'accueil",
@@ -42,6 +43,9 @@
     "ListRecipe": "Liste Recette",
     "CreateRecipe" : "Ajouter nouvelle recette",
     "BoilingTime" : "Temps d'ébullition",
-    "Volume" : "Volume"
+    "Volume" : "Volume",
+    "SeeDetailsMalt" : "Voir détails malts",
+    "SeeDetailsHop" : "Voir détails houblons",
+    "SeeDetailsYeast" : "Voir détails levures"
     
 }

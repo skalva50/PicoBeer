@@ -1,37 +1,193 @@
-@model PicoBeer.Domain.Recipe
+@model PicoBeer.Web.RecipeDetailViewModel
 
 @{
-    ViewData["Title"] = Localizer["Details"];
+    ViewData["Title"] = @Html.DisplayFor(model => model.recipe.Name);
 }
-<div class="row"->
-    <h2>@Localizer["Details"]</h2>
+<div class="row justify-content-center align-items-center">
+    <h1 class="display-4">@Html.DisplayFor(model => model.recipe.Name)</h1>    
 </div>
 <div class="row">
-    <h4>@Localizer["Recipe"]</h4>
+    <div class="col">
+        <div class="row">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Localizer["Description"]
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.recipe.Description)
+                </dd>
+                <dt>
+                    @Localizer["Volume"]
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.recipe.Volume)
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="row">
+            <h4>@Localizer["Malt"]</h4>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Id
+                        </th>
+                        <th scope="col">
+                            @Localizer["Name"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Ebc"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Quantity"]
+                        </th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+            @foreach (var item in Model.recipe.ListMalt) {
+                    <tr>
+                        <th scope="row">
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Ebc)
+                        </td> 
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@Localizer["Malt"]@Html.DisplayFor(modelItem => item.Id)">
+                                @Localizer["SeeDetailsMalt"]
+                            </button>                            
+                        </td>                        
+                    </tr>
+            }
+                </tbody>
+            </table>
+        </div>
+    @foreach (var item in Model.recipe.ListMalt) {        
+        @await Html.PartialAsync("_DetailsRecipeMaltPartial",item)
+    }
+
+
+        <div class="row">
+            <h4>@Localizer["Hop"]</h4>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Id
+                        </th>
+                        <th scope="col">
+                            @Localizer["Name"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Alpha"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Quantity"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["BoilingTime"]
+                        </th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+            @foreach (var item in Model.recipe.ListHop) {
+                    <tr>
+                        <th scope="row">
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Alpha)
+                        </td> 
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>                                               
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BoilingTime)
+                        </td>  
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@Localizer["Hop"]@Html.DisplayFor(modelItem => item.Id)">
+                                @Localizer["SeeDetailsHop"]
+                            </button>                            
+                        </td>                                                                                                   
+                    </tr>
+            }
+                </tbody>
+            </table>
+        </div>
+        @foreach (var item in Model.recipe.ListHop) {        
+            @await Html.PartialAsync("_DetailsRecipeHopPartial",item)
+        }
+
+        <div class="row">
+            <h4>@Localizer["Yeast"]</h4>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Id
+                        </th>
+                        <th scope="col">
+                            @Localizer["Name"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Attenuation"]
+                        </th>
+                        <th scope="col">
+                            @Localizer["Quantity"]
+                        </th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.recipe.ListYeast) {
+                    <tr>
+                        <th scope="row">
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ingredient.Attenuation)
+                        </td> 
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>                                                                                           
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@Localizer["Yeast"]@Html.DisplayFor(modelItem => item.Id)">
+                                @Localizer["SeeDetailsYeast"]
+                            </button>                            
+                        </td>                              
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        @foreach (var item in Model.recipe.ListYeast) {        
+            @await Html.PartialAsync("_DetailsRecipeYeastPartial",item)
+        }
+    </div>
 </div>
 <div class="row">
-    <dl class="dl-horizontal">
-        <dt>
-            @Localizer["Name"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Localizer["Description"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt>
-            @Localizer["Volume"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Volume)
-        </dd>
-    </dl>
-</div>
-<div class="row">
-    <a asp-action="Edit" asp-route-id="@Model.Id">@Localizer["Edit"]</a> |
+    <a asp-action="Edit" asp-route-id="@Model.recipe.Id">@Localizer["Edit"]</a> |
     <a asp-action="Index">@Localizer["BackToList"]</a>
 </div>

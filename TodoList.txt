@@ -1,3 +1,4 @@
-Completer formulaire creation recette
+Completer formulaire detail recette
 
-Creer Seed
+Ajouter toogle pour detail des ingredients
+

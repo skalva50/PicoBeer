@@ -1,0 +1,12 @@
+@model PicoBeer.Domain.Malt
+
+<dl class="row">  
+    <dt class="col-3">@Localizer["Name"]:</dt>
+    <dd class="col-9">@Html.DisplayFor(model => model.Name)</dd>
+    <dt class="col-3">@Localizer["Description"]</dt>
+    <dd class="col-9">@Html.DisplayFor(model => model.Description)</dd>
+    <dt class="col-3">@Localizer["Ebc"]</dt>
+    <dd class="col-9">@Html.DisplayFor(model => model.Ebc)</dd>
+    <dt class="col-3">@Localizer["ExtractFactor"]</dt>
+    <dd class="col-9">@Html.DisplayFor(model => model.ExtractFactor)</dd>             
+</dl>

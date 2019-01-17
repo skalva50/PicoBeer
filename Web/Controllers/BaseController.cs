@@ -9,7 +9,7 @@ namespace PicoBeer.Web.Controllers
 {
     public abstract class BaseController<T> : Controller where T : BaseEntity
     {
-        private readonly IService<T> _service;
+        protected readonly IService<T> _service;
 
         protected BaseController(IService<T> service)
         {
@@ -21,7 +21,7 @@ namespace PicoBeer.Web.Controllers
             return View(await _service.ListAllAsync());
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public virtual async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {

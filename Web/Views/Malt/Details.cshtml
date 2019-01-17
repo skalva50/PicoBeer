@@ -10,32 +10,7 @@
     <h4>@Localizer["Malt"]</h4>
 </div>
 <div class="row">
-    <dl class="dl-horizontal">
-        <dt>
-            @Localizer["Name"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Localizer["Description"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt>
-            @Localizer["Ebc"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Ebc)
-        </dd>
-        <dt>
-            @Localizer["ExtractFactor"]
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ExtractFactor)
-        </dd>
-    </dl>
+    @await Html.PartialAsync("_DetailsMaltPartial",Model)
 </div>
 <div class="row">
     <a asp-action="Edit" asp-route-id="@Model.Id">@Localizer["Edit"]</a> |

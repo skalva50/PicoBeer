@@ -8,6 +8,7 @@
     "SureToDelete" : "Are you sure you want to delete this?",
     "BackToList" : "Back to List",
     "UnderConstruction" : "Under construction",
+    "Close" : "Close",
 
     "HOME*****************************************" : "HOME",
     "HomePage" : "Home Page",
@@ -42,6 +43,9 @@
     "ListRecipe": "List Recipe",
     "CreateRecipe" : "Create new Recipe",
     "BoilingTime" : "Boiling Time",
-    "Volume" : "Volume"
+    "Volume" : "Volume",
+    "SeeDetailsMalt" : "See details malts",
+    "SeeDetailsHop" : "See details hops",
+    "SeeDetailsYeast" : "See details yeasts"
     
 }
